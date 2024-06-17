@@ -1,0 +1,88 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load hitcount_tags %}
+
+{% block title %}Sport | Newsta{% endblock title %}
+
+{% block content %}
+    <div class="single_post_content">
+        <h2><span>Sport News</span></h2>
+    </div>
+    <div class="group_news_area">
+        <div class="group_main_section">
+            <ul class="group_main-item wow fadeInDown">
+                {% for news in sport_news %}
+                    {% if forloop.first %}
+                    <li>
+                        <div class="single_post_content_left">
+                            <figure class="bsbig_fig wow fadeInDown"> 
+                                <a href="{{ news.get_absolute_url }}" class="featured_img"> 
+                                    <img alt="{{ news.title }}" src="{{ news.image.url }}"> 
+                                    <span class="overlay"></span> 
+                                </a>
+                                <p class="custom-absolute"><i class="fa fa-eye"></i> {% get_hit_count for news %}</p>
+                            </figure>
+                        </div>
+                        <div class="single_post_content_right">
+                            <h3> <a href="{{ news.get_absolute_url }}">{{ news.title }}</a> </h3>
+                            <p>{{ news.body | truncatewords:15 }}</p>
+                        </div>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul class="group_main-item wow fadeInDown">
+                {% for news in sport_news %}
+                    {% if forloop.counter == 2 %}
+                    <li>
+                        <div class="single_post_content_left">
+                            <figure class="bsbig_fig wow fadeInDown"> 
+                                <a href="{{ news.get_absolute_url }}" class="featured_img"> 
+                                    <img alt="{{ news.title }}" src="{{ news.image.url }}"> 
+                                    <span class="overlay"></span> 
+                                </a>
+                                <p class="custom-absolute"><i class="fa fa-eye"></i> {% get_hit_count for news %}</p>
+                            </figure>
+                        </div>
+                        <div class="single_post_content_right">
+                            <h3> <a href="{{ news.get_absolute_url }}">{{ news.title }}</a> </h3>
+                            <p>{{ news.body | truncatewords:15 }}</p>
+                        </div>
+                    </li>
+                   {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="group_navbar_section">
+            <ul class="group_nav-item">
+                {% for news in sport_news %} 
+                    {% if forloop.counter > 2 and forloop.counter0|divisibleby:2 %}  
+                    <li>
+                        <div class="media wow fadeInDown"> <a href="{{ news.get_absolute_url }}" class="group_nav-left"> <img alt="{{ news.title }}" src="{{ news.image.url }}"> </a>
+                            <div class="media-body"> 
+                                <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a> 
+                                <p><i class="fa fa-eye text-muted"></i> {% get_hit_count for news %}</p>
+                            </div>
+                        </div>
+                    </li>
+                    {% endif %}  
+                {% endfor %}
+            </ul>
+            <ul class="group_nav-item">
+                {% for news in sport_news %}
+                    {% if forloop.counter > 3 and forloop.counter|divisibleby:2 %}
+                    <li>
+                        <div class="media wow fadeInDown"> <a href="{{ news.get_absolute_url }}" class="group_nav-left"> <img alt="{{ news.title }}" src="{{ news.image.url }}"> </a>
+                            <div class="media-body"> 
+                                <a href="{{ news.get_absolute_url }}" class="catg_title">{{ news.title }}</a> 
+                                <p><i class="fa fa-eye text-muted"></i> {% get_hit_count for news %}</p>
+                            </div>
+                        </div>
+                    </li>
+                    {% endif %}  
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock content %}

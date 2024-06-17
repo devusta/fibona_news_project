@@ -1,0 +1,29 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Signup | Zamin News{% endblock title %}
+
+{% block content %}
+    
+    <div class="single_post_content">
+        <h2><span>Signup</span></h2>
+    </div>
+    <div class="single_post_content">
+        <ul class="delete_section">
+            <li>
+                <form method="post">{% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="">
+                        <button type="submit" class="btn btn-green">Signup</button>
+                        <div class="f-right" style="float: right;">
+                            <p class="dis-inline" style="display: inline;">Already have an account?</p>
+                            <a href="{% url 'login' %}" class="btn default-btn">Login</a>
+                        </div>
+                    </div> 
+                </form>                    
+            </li>
+        </ul>
+    </div>
+    
+{% endblock content %}

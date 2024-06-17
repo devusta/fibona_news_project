@@ -1,0 +1,35 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}Delete News | Newsta{% endblock title %}
+
+{% block content %}
+    <div class="single_post_content">
+        <h2><span>Delete News</span></h2>
+    </div>
+    <div class="single_post_content">
+        <ul class="delete_section wow">
+            <li>
+                <div class="single_post_content_left">
+                    <figure class="bsbig_fig wow"> <a href="{{ news.get_absolute_url }}" class="featured_img"> <img alt="{{ news.title }}" src="{{ news.image.url }}"> <span class="overlay"></span> </a></figure>
+                </div>
+                <div class="single_post_content_right">
+                    <h3> <a href="{{ news.get_absolute_url }}">{{ news.title }}</a> </h3>
+                    <p>{{ news.body | truncatewords:15 }}</p>
+                </div>
+            </li>
+            <li>
+                <form method="post">{% csrf_token %}
+                    <figure class=bsbig_fig>
+                        <figcaption class="text-center">Do you want to delete the news "{{ news.title }}"?</figcaption>
+                    </figure>
+                    <div class="btn-section">
+                        <a href="{{ news.get_absolute_url }}" class="btn default-btn">Go Back</a>
+                        <button type="submit" class="btn btn-red">Delete</button>
+                    </div>
+                </form>                    
+            </li>
+        </ul>
+    </div>
+    
+{% endblock content %}

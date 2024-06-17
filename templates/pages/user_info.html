@@ -1,0 +1,99 @@
+{% extends 'news/base.html' %}
+{% load static %}
+
+{% block title %}User Info | Newsta{% endblock title %}
+
+{% block content %}
+    <div class="single_post_content">
+        <h2><span>User Info</span></h2>
+    </div>
+    <div class="clr"></div>
+    <div class="container">
+    <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">    
+                    <div class="">
+                          {% if view_user.profile.photo %}
+                              <img class="profile_img" src="{{ view_user.profile.photo.url }}" alt="">
+                          {% else %}  
+                              <img class="profile_img" src="{% static 'css/images/profile.png' %}" alt="">
+                          {% endif %}
+                    </div>  
+                    <div class="margin-top">
+                        <h4>{{ view_user.username }}</h4>
+                        <p class="text-secondary mb-1">{{ view_user.profile.address }}</p>
+                        <p class="text-muted font-size-sm">Joined at {{ view_user.date_joined | date }}</p>
+{#                        <a href="{% url 'password_change' %}" class="btn default-btn">Change password</a>#}
+{#                        <form method="post" action="{% url 'logout' %}" class="header_top_left">{% csrf_token %}#}
+{#                          <button type="submit" class="btn btn-theme">Logout</button>  #}
+{#                        </form>#}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">First Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ view_user.first_name }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Last Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{ view_user.last_name }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{ view_user.email }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        {{ view_user.phone_number }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Date of birth</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      {{ view_user.birth_date }}
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " href="{% url 'user_change' %}">Edit Profile</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+{% endblock content %}
