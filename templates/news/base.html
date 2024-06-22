@@ -175,16 +175,41 @@
     <script src="{% static 'js/jquery.newsTicker.min.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
     <script src="{% static 'js/custom.js' %}"></script>
-    
-{#    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>#}
+    <script src="{% static 'js/custom_script.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.toggle-status').on('click', function () {
+                var commentId = $(this).data('comment-id');
+                var button = $(this);
+                $.ajax({
+                    type: 'POST',
+                    url: "{% url 'toggle_comment_status' 0 %}".replace('0', commentId),
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            if (response.is_active) {
+                                button.text('Deactivate');
+                            } else {
+                                button.text('Activate');
+                            }
+                        } else {
+                            alert('Error toggling comment status');
+                        }
+                    }
+                });
+            });
+        });
+    </script>
     <script>
     $(document).ready(function() {
-        $('.toggle-status').on('click', function() {
-            var commentId = $(this).data('comment-id');
+        $('.toggle-user-status').on('click', function() {
+            var userId = $(this).data('user-id');
             var button = $(this);
             $.ajax({
                 type: 'POST',
-                url: "{% url 'toggle_comment_status' 0 %}".replace('0', commentId),
+                url: "{% url 'toggle_user_status' 0 %}".replace('0', userId),
                 data: {
                     'csrfmiddlewaretoken': '{{ csrf_token }}'
                 },
@@ -196,13 +221,14 @@
                             button.text('Activate');
                         }
                     } else {
-                        alert('Error toggling comment status');
+                        alert('Error toggling user status');
                     }
                 }
             });
         });
     });
 </script>
+    
 {% endblock javascript %}
 </body>
 </html>

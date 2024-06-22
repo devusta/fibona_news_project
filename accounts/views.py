@@ -95,6 +95,14 @@ def toggle_comment_status_view(request, comment_id):
 
 
 @admin_required
+def toggle_user_status_view(request, user_id):
+    user = get_object_or_404(CustomUser, id=user_id)
+    user.is_active = not user.is_active
+    user.save()
+    return JsonResponse({'success': True, 'is_active': user.is_active})
+
+
+@admin_required
 def user_info_view(request, user_id):
     user = request.user
     view_user = get_object_or_404(CustomUser, pk=user_id)

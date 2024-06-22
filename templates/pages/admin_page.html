@@ -1,4 +1,6 @@
-{% extends 'news/base.html' %}
+
+    0
++{% extends 'news/base.html' %}
 {% load static %}
 {% load hitcount_tags %}
 
@@ -37,11 +39,10 @@
                                         <tr class="row100 head">
                                             <th class="column100 column1" data-column="column1">Num</th>
                                             <th class="column100 column2" data-column="column2">Username</th>
-                                            <th class="column100 column3" data-column="column3">First Name</th>
-                                            <th class="column100 column4" data-column="column4">Last Name</th>
-                                            <th class="column100 column5" data-column="column5">Email</th>
-                                            <th class="column100 column6" data-column="column6">Staff Status</th>
-                                            <th class="column100 column6" data-column="column6">View</th>
+                                            <th class="column100 column5" data-column="column3">Email</th>
+                                            <th class="column100 column6" data-column="column4">Staff Status</th>
+                                            <th class="column100 column7" data-column="column5">Activity</th>
+                                            <th class="column100 column8" data-column="column6">View</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -49,14 +50,21 @@
                                         <tr class="row100">
                                             <td class="column100 column1" data-column="column1">{{ forloop.counter }}</td>
                                             <td class="column100 column2" data-column="column2">{{ user.username }}</td>
-                                            <td class="column100 column3" data-column="column3">{{ user.first_name }}</td>
-                                            <td class="column100 column4" data-column="column4">{{ user.last_name }}</td>
-                                            <td class="column100 column5" data-column="column5">{{ user.email }}</td>
-                                            {% if user.is_superuser %}
-                                            <td><i class="fa fa-check-circle fa-2x text-success"></i></td>
-                                            {% else %}
-                                            <td><i class="fa fa-times-circle fa-2x text-danger"></i></td>
-                                            {% endif %}
+                                            <td class="column100 column5" data-column="column3">{{ user.email }}</td>
+                                            <td>
+                                                {% if user.is_superuser %}
+                                                <i class="fa fa-check-circle fa-2x text-success"></i>
+                                                {% else %}
+                                                <i class="fa fa-times-circle fa-2x text-danger"></i> 
+                                                {% endif %}   
+                                            </td>
+                                            <td class="column100 column5" data-column="column5">
+                                                {% if user.is_active %}
+                                                Active 
+                                                {% else %}
+                                                No active     
+                                                {% endif %}
+                                            </td>
                                             <td class="column100 column5" data-column="column5"><a href="{% url 'view_user_dashboard' user.pk %}">Detail</a></td>
                                         </tr>
                                         {% endfor %}

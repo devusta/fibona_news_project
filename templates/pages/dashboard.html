@@ -24,8 +24,8 @@
                     </div>  
                     <div class="margin-top">
                         <h4>{{ user.username }}</h4>
-                        <p class="text-secondary mb-1">{{ user.profile.address }}</p>
-                        <p class="text-muted font-size-sm">Joined at {{ user.date_joined | date }}</p>
+                        <h6 class="text-secondary mb-1">{{ user.profile.address }}</h6>
+                        <h6 class="text-muted font-size-sm">Joined at {{ user.date_joined | date }}</h6>
                         <a href="{% url 'password_change' %}" class="btn default-btn">Change password</a>
                         <form method="post" action="{% url 'logout' %}" class="header_top_left">{% csrf_token %}
                           <button type="submit" class="btn btn-theme">Logout</button>  
@@ -91,14 +91,8 @@
                   </div>
                 </div>
               </div>
-
-              
-
-
-
             </div>
           </div>
-
         </div>
     </div>
     
