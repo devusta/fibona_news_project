@@ -6,7 +6,7 @@ from django.views.generic.edit import FormMixin
 from hitcount.utils import get_hitcount_model
 from hitcount.views import HitCountDetailView, HitCountMixin
 from .forms import ContactForm, CommentForm
-from .models import News, Category
+from .models import News, Category, Comment
 from config.custom_permissions import CustomUserPassesTestMixin
 from django.views.generic import (
     ListView,
@@ -58,6 +58,7 @@ class NewsDetailView(FormMixin, HitCountDetailView):    # classga asoslangan New
         context['comments'] = self.object.comments.filter(is_active=True)
         if 'comment_form' not in context:
             context['comment_form'] = self.get_form()
+        context['related_news'] = News.objects.exclude(pk=self.object.pk).filter(category__name=self.object.category.name).order_by('-publish_time')[:3]
         return context
 
     def post(self, request, *args, **kwargs):
@@ -228,3 +229,10 @@ class SearchResultsView(ListView):
             return News.objects.filter(
                 Q(title__icontains=query) | Q(body__icontains=query)
             )
+
+
+class AboutView(TemplateView):
+    model = None
+    template_name = 'news/about.html'
+
+

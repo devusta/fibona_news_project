@@ -2,6 +2,8 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from hitcount.models import HitCountMixin, HitCount
+
 from accounts.models import CustomUser
 
 
@@ -18,7 +20,7 @@ class Category(models.Model):
         return self.name
 
 
-class News(models.Model):
+class News(models.Model, HitCountMixin):
     class Status(models.TextChoices):
         Draft = 'DF', 'Draft'
         Published = 'PB', 'Published'
@@ -34,6 +36,7 @@ class News(models.Model):
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.Draft)
+    hit_count_generic = models.ForeignKey(HitCount, on_delete=models.CASCADE, blank=True, null=True, related_name='news_hit_count')
 
     objects = models.Manager()      # default manager
     published = PublishedManager()  # biz hosil qilgan manager

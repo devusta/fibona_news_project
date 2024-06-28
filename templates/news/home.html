@@ -2,7 +2,7 @@
 {% load static %}
 {% load hitcount_tags %}
 
-{% block title %}Home | Newsta{% endblock title %}
+{% block title %}Home | Fibona News{% endblock title %}
 {% block content %}
 
   <section id="sliderSection">
@@ -226,26 +226,16 @@
           <div class="single_sidebar">
             <h2><span>Popular News</span></h2>
             <ul class="spost_nav">
+              {% for news in popular_news %}  
               <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="{% static 'images/post_img1.jpg' %}" src="{{ news.image.url }}"> </a>
+                  <div class="media-body"> 
+                      <a href="pages/single_page.html" class="catg_title">{{ news.title | truncatewords:8 }}</a> 
+                      <p><i class="fa fa-eye text-muted"></i> {% get_hit_count for news %}</p>
+                  </div>
                 </div>
               </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
-                </div>
-              </li>
-              <li>
-                <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                  <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
-                </div>
-              </li>
+              {% endfor %}  
             </ul>
           </div>
           <div class="single_sidebar">
@@ -256,39 +246,35 @@
             </ul>
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="category">
-                <ul>
-                  {% for category in categories %}  
-                  <li class="cat-item"><a href="#">{{ category.name | title }}</a></li>
+                <ul>  
+                  {% for category, url in category_urls.items %}  
+                  <li class="cat-item"><a href="{% url url %}">{{ category | title }}</a></li>
                   {% endfor %}  
                 </ul>
               </div>
               <div role="tabpanel" class="tab-pane" id="video">
                 <div class="vide_area">
-                  <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/CHSnz0bCaUk?si=4BNPZihfVEuMW4Gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>                
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane" id="comments">
                 <ul class="spost_nav">
+                  {% for comment in all_comments %}  
                   <li>
-                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                    <div class="media single_comment_content"> 
+                        <div class="media-body">
+                            <a href="{{ comment.news.get_absolute_url }}">{{ comment.news }}
+                                <i class="fa fa-eye text-muted"> {% get_hit_count for comment.news %}</i>
+                            </a>
+                        </div>
+                        <p class="catg_title">{{ comment.body|truncatewords:10 }}</p> 
+                        <div class="comment-body">
+                            <span>{{ comment.author }}</span>
+                            <span>- {{ comment.created_time | date:"Y/m/d H:i" }}</span>
+                        </div>
                     </div>
                   </li>
-                  <li>
-                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img1.jpg' %}"> </a>
-                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{% static 'images/post_img2.jpg' %}"> </a>
-                      <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
-                    </div>
-                  </li>
+                  {% endfor %}  
                 </ul>
               </div>
             </div>
@@ -309,8 +295,10 @@
             <h2><span>Links</span></h2>
             <ul>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Rss Feed</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="#">Fibona</a></li>
+              {% if not request.user.is_authenticated %} 
+              <li><a href="{% url 'login' %}">Login</a></li>
+              {% endif %}  
               <li><a href="#">Life &amp; Style</a></li>
             </ul>
           </div>

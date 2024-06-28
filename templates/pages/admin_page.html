@@ -1,14 +1,12 @@
-
-    0
-+{% extends 'news/base.html' %}
+{% extends 'news/base.html' %}
 {% load static %}
 {% load hitcount_tags %}
 
-{% block title %}Admin Page | Zamin news{% endblock title %}
+{% block title %}Admin Page | Fibona News{% endblock title %}
 
 {% block content %}
 
-<section id="contentSection">
+<section id="contentSection" class="admin_min-height">
     <div class="row">
         <div class="single_post_content">
                 <h2><span>Administration</span></h2>
@@ -30,7 +28,7 @@
                             </ul>
                     </div>
                 </div>
-                <div class="single_sidebar">
+                <div class="single_sidebar custom-overflow">
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="category">
                             <div class="table100 ver3">
@@ -133,29 +131,7 @@
                         </div>
                     </div>
                 </div>
-            </div>    
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <aside class="right_content">
-                <div class="single_sidebar wow fadeInDown">
-                    <h2><span>Category Archive</span></h2>
-                    <select class="catgArchive">
-                        <option>Select Category</option>
-                        {% for category in categories %}
-                        <option>{{ category.name | title }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="single_sidebar wow fadeInDown">
-                    <h2><span>Links</span></h2>
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Rss Feed</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Life &amp; Style</a></li>
-                    </ul>
-                </div>
-            </aside>
-        </div>
+        </div>            
     </div>
 </section>
 

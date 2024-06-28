@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "hitcount",
     "accounts",
     "news",
+    "tags",
 ]
 
 MIDDLEWARE = [
@@ -143,7 +144,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # EMAIL_USE_TLS = True
 
 LOGIN_REDIRECT_URL = "home"
-# LOGOUT_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
 LOGIN_URL = "login"
 
 MEDIA_URL = "media/"

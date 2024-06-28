@@ -13,14 +13,13 @@ from .views import (
     NewsCreateView,
     NewsUpdateView,
     NewsDeleteView,
-    news_detail_view,
     SearchResultsView,
+    AboutView,
 )
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='home'),
     path('news/<slug:slug>/', NewsDetailView.as_view(), name='news_detail'),
-    # path('news/<slug:news>/', news_detail_view, name='news_detail'),
     path('social/', SocialNewsView.as_view(), name='social_news'),
     path('technology/', TechnologyNewsView.as_view(), name='tech_news'),
     path('sport/', SportNewsView.as_view(), name='sport_news'),
@@ -33,5 +32,6 @@ urlpatterns = [
     path('<slug>/delete/', NewsDeleteView.as_view(), name='news_delete'),
     path('contact/', ContactView.as_view(), name='contact'),
     path('searchresults/', SearchResultsView.as_view(), name='search_results'),
+    path('about/', AboutView.as_view(), name='about'),
 ]
 
