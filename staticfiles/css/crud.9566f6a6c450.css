@@ -1,0 +1,20 @@
+.btn-section {
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/*Delete_news */
+.delete_section {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.delete_section li {
+    float:left;
+    display:block;
+    width:100%;
+}
+
