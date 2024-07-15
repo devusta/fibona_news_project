@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %}Logout | Fibona News{% endblock title %}
@@ -11,20 +12,20 @@
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="left_content">
           <div class="single_post_content">
-            <h2><span>Logout</span></h2>
+            <h2><span>{% blocktranslate %}Logout{% endblocktranslate %}</span></h2>
           </div>  
           <div class="error_page">
-            <h3>You are logged out!</h3>
+            <h3>{% blocktranslate %}You are logged out{% endblocktranslate %}!</h3>
             <img src="{% static 'css/images/icons8-logout-96.png' %}" alt="You are logged out!">
-            <p>You can use the service by logging in again</p>
-            <span></span> <a href="{% url 'login' %}" class="wow fadeInLeftBig">Login</a> 
+            <p>{% blocktranslate %}You can use the service by logging in again{% endblocktranslate %}</p>
+            <span></span> <a href="{% url 'login' %}" class="wow fadeInLeftBig">{% blocktranslate %}Login{% endblocktranslate %}</a> 
           </div>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 col-sm-4">
         <aside class="right_content">
           <div class="single_sidebar">
-            <h2><span>Popular News</span></h2>
+            <h2><span>{% blocktranslate %}Popular News{% endblocktranslate %}</span></h2>
             <ul class="spost_nav">
               {% for news in popular_news %}  
               <li>

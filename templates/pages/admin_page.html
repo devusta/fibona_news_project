@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %}Admin Page | Fibona News{% endblock title %}
@@ -9,80 +10,108 @@
 <section id="contentSection" class="admin_min-height">
     <div class="row">
         <div class="single_post_content">
-                <h2><span>Administration</span></h2>
-                <div class="single_sidebar">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                        <ul class="nav nav-tabs" role="tablist">
-                            <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab"
-                                    data-toggle="tab">All Users</a></li>
-                            <li role="presentation"><a href="#video" aria-controls="profile" role="tab"
-                                    data-toggle="tab">Admins</a></li>
-                            <li role="presentation"><a href="#comments" aria-controls="messages" role="tab"
-                                    data-toggle="tab">Comments</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8">
-                            <ul class="single_post_content_right">
-                                <li class="cat-item"><a href="{% url 'signup' %}">Add User +</a></li>
-                                <li class="cat-item"><a href="{% url 'news_create' %}">Add News +</a></li>
-                            </ul>
-                    </div>
+            <h2><span>{% blocktranslate %}Administration{% endblocktranslate %}</span></h2>
+            <div class="single_sidebar">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <ul class="nav admin_nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#news" aria-controls="home" role="tab"
+                                    data-toggle="tab">{% blocktranslate %}All News{% endblocktranslate %}</a></li>
+                        <li role="presentation" class=""><a href="#users" aria-controls="" role="tab"
+                                    data-toggle="tab">{% blocktranslate %}All Users{% endblocktranslate %}</a></li>
+                        <li role="presentation"><a href="#admins" aria-controls="profile" role="tab"
+                                    data-toggle="tab">{% blocktranslate %}Admins{% endblocktranslate %}</a></li>
+                        <li role="presentation"><a href="#comments" aria-controls="messages" role="tab"
+                                    data-toggle="tab">{% blocktranslate %}Comments{% endblocktranslate %}</a></li>
+                    </ul>
                 </div>
-                <div class="single_sidebar custom-overflow">
-                    <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="category">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <ul class="admin_single_post_content_right">
+                        <li class="cat-item"><a href="{% url 'news_create' %}">{% blocktranslate %}Add News{% endblocktranslate %} +</a></li>
+                        <li class="cat-item"><a href="{% url 'signup' %}">{% blocktranslate %}Add User{% endblocktranslate %} +</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="single_sidebar custom-overflow">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="news">
+                        <div class="table100 ver3">
+                            <table class="admin_page_table" data-vertable="ver3">
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="column100 column1" data-column="column1">{% blocktranslate %}Num{% endblocktranslate %}</th>
+                                        <th class="column100 column2" data-column="column2">{% blocktranslate %}News Title{% endblocktranslate %}</th>
+                                        <th class="column100 column5" data-column="column3">{% blocktranslate %}Views{% endblocktranslate %}</th>
+                                        <th class="column100 column6" data-column="column4">{% blocktranslate %}Category{% endblocktranslate %}</th>
+                                        <th class="column100 column8" data-column="column6">{% blocktranslate %}View{% endblocktranslate %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for news in all_news %}
+                                    <tr class="row100">
+                                        <td class="column100 column1" data-column="column1">{{ forloop.counter }}</td>
+                                        <td class="column100 column2" data-column="column2">{{ news.title | truncatewords:20 }}</td>
+                                        <td class="column100 column5" data-column="column3">{% get_hit_count for news %}</td>
+                                        <td class="column100 column5" data-column="column3">{{ news.category }}</td>
+                                        <td class="column100 column5" data-column="column5"><a href="{{ news.get_absolute_url }}">{% blocktranslate %}Detail{% endblocktranslate %}</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="users">
+                        <div class="table100 ver3">
+                            <table class="admin_page_table" data-vertable="ver3">
+                                <thead>
+                                    <tr class="row100 head">
+                                        <th class="column100 column1" data-column="column1">{% blocktranslate %}Num{% endblocktranslate %}</th>
+                                        <th class="column100 column2" data-column="column2">{% blocktranslate %}Username{% endblocktranslate %}</th>
+                                        <th class="column100 column5" data-column="column3">{% blocktranslate %}Email{% endblocktranslate %}</th>
+                                        <th class="column100 column6" data-column="column4">{% blocktranslate %}Staff Status{% endblocktranslate %}</th>
+                                        <th class="column100 column7" data-column="column5">{% blocktranslate %}Activity{% endblocktranslate %}</th>
+                                        <th class="column100 column8" data-column="column6">{% blocktranslate %}View{% endblocktranslate %}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for user in users %}
+                                    <tr class="row100">
+                                        <td class="column100 column1" data-column="column1">{{ forloop.counter }}</td>
+                                        <td class="column100 column2" data-column="column2">{{ user.username }}</td>
+                                        <td class="column100 column5" data-column="column3">{{ user.email }}</td>
+                                        <td>
+                                            {% if user.is_superuser %}
+                                            <i class="fa fa-check-circle fa-2x text-success"></i>
+                                            {% else %}
+                                            <i class="fa fa-times-circle fa-2x text-danger"></i> 
+                                            {% endif %}   
+                                        </td>
+                                        <td class="column100 column5" data-column="column5">
+                                            {% if user.is_active %}
+                                            {% blocktranslate %}Active{% endblocktranslate %} 
+                                            {% else %}
+                                            {% blocktranslate %}No active{% endblocktranslate %}     
+                                            {% endif %}
+                                        </td>
+                                        <td class="column100 column5" data-column="column5"><a href="{% url 'view_user_dashboard' user.pk %}">{% blocktranslate %}Detail{% endblocktranslate %}</a></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="admins">
+                        <div class="vide_area">
                             <div class="table100 ver3">
                                 <table class="admin_page_table" data-vertable="ver3">
                                     <thead>
                                         <tr class="row100 head">
-                                            <th class="column100 column1" data-column="column1">Num</th>
-                                            <th class="column100 column2" data-column="column2">Username</th>
-                                            <th class="column100 column5" data-column="column3">Email</th>
-                                            <th class="column100 column6" data-column="column4">Staff Status</th>
-                                            <th class="column100 column7" data-column="column5">Activity</th>
-                                            <th class="column100 column8" data-column="column6">View</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {% for user in users %}
-                                        <tr class="row100">
-                                            <td class="column100 column1" data-column="column1">{{ forloop.counter }}</td>
-                                            <td class="column100 column2" data-column="column2">{{ user.username }}</td>
-                                            <td class="column100 column5" data-column="column3">{{ user.email }}</td>
-                                            <td>
-                                                {% if user.is_superuser %}
-                                                <i class="fa fa-check-circle fa-2x text-success"></i>
-                                                {% else %}
-                                                <i class="fa fa-times-circle fa-2x text-danger"></i> 
-                                                {% endif %}   
-                                            </td>
-                                            <td class="column100 column5" data-column="column5">
-                                                {% if user.is_active %}
-                                                Active 
-                                                {% else %}
-                                                No active     
-                                                {% endif %}
-                                            </td>
-                                            <td class="column100 column5" data-column="column5"><a href="{% url 'view_user_dashboard' user.pk %}">Detail</a></td>
-                                        </tr>
-                                        {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="video">
-                            <div class="vide_area">
-                                <div class="table100 ver3">
-                                <table class="admin_page_table" data-vertable="ver3">
-                                    <thead>
-                                        <tr class="row100 head">
-                                            <th class="column100 column1" data-column="column1">Num</th>
-                                            <th class="column100 column2" data-column="column2">Username</th>
-                                            <th class="column100 column3" data-column="column3">First Name</th>
-                                            <th class="column100 column4" data-column="column4">Last Name</th>
-                                            <th class="column100 column5" data-column="column5">Email</th>
-                                            <th class="column100 column6" data-column="column6">Last Login</th>
-                                            <th class="column100 column6" data-column="column6">View</th>
+                                            <th class="column100 column1" data-column="column1">{% blocktranslate %}Num{% endblocktranslate %}</th>
+                                            <th class="column100 column2" data-column="column2">{% blocktranslate %}Username{% endblocktranslate %}</th>
+                                            <th class="column100 column3" data-column="column3">{% blocktranslate %}First Name{% endblocktranslate %}</th>
+                                            <th class="column100 column4" data-column="column4">{% blocktranslate %}Last Name{% endblocktranslate %}</th>
+                                            <th class="column100 column5" data-column="column5">{% blocktranslate %}Email{% endblocktranslate %}</th>
+                                            <th class="column100 column6" data-column="column6">{% blocktranslate %}Last Login{% endblocktranslate %}</th>
+                                            <th class="column100 column6" data-column="column6">{% blocktranslate %}View{% endblocktranslate %}</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -94,43 +123,43 @@
                                             <td class="column100 column4" data-column="column4">{{ admin.last_name }}</td>
                                             <td class="column100 column5" data-column="column5">{{ admin.email }}</td>
                                             <td class="column100 column5" data-column="column5">{{ admin.last_login }}</td>
-                                            <td class="column100 column5" data-column="column5"><a href="{% url 'view_user_dashboard' user.pk %}">Detail</a></td>
+                                            <td class="column100 column5" data-column="column5"><a href="{% url 'view_user_dashboard' user.pk %}">{% blocktranslate %}Detail{% endblocktranslate %}</a></td>
                                         </tr>
                                         {% endfor %}
                                     </tbody>
                                 </table>
                             </div>
-                            </div>
-                        </div>
-                        <div role="tabpanel" class="tab-pane" id="comments">
-                            {% for comment in comments %}
-                            <ul class="spost_nav">
-                                <li>
-                                    <div class="media single_comment_content"> 
-                                        <a href="{{ comment.news.get_absolute_url }}"
-                                            class="media-left"> <img alt="" src="{{ comment.news.image.url }}">
-                                        </a>
-                                        <div class="media-body">
-                                            <div class="media-body">
-                                                <a href="{{ comment.news.get_absolute_url }}">{{ comment.news }}
-                                                    <i class="fa fa-eye text-muted"> {% get_hit_count for comment.news %}</i></a>
-                                            </div>
-                                            <p class="catg_title">{{ comment.body }}</p> 
-                                            <div class="comment-body">
-                                                <span>{{ comment.author }}</span>
-                                                <span>- {{ comment.created_time }}</span>
-                                            </div> 
-                                            <button class="btn btn-secondary btn-sm toggle-status" data-comment-id="{{ comment.id }}">
-                                            {% if comment.is_active %}Deactivate{% else %}Activate{% endif %}
-                                            </button>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            {% endfor %}
                         </div>
                     </div>
+                    <div role="tabpanel" class="tab-pane" id="comments">
+                        {% for comment in comments %}
+                        <ul class="spost_nav">
+                            <li>
+                                <div class="media single_comment_content"> 
+                                    <a href="{{ comment.news.get_absolute_url }}"
+                                       class="media-left"> <img alt="" src="{{ comment.news.image.url }}">
+                                    </a>
+                                    <div class="media-body">
+                                        <div class="media-body">
+                                            <a href="{{ comment.news.get_absolute_url }}">{{ comment.news }}
+                                                <i class="fa fa-eye text-muted"> {% get_hit_count for comment.news %}</i></a>
+                                        </div>
+                                        <p class="catg_title">{{ comment.body }}</p> 
+                                        <div class="comment-body">
+                                            <span>{{ comment.author }}</span>
+                                            <span>- {{ comment.created_time }}</span>
+                                        </div> 
+                                        <button class="btn btn-secondary btn-sm toggle-status" data-comment-id="{{ comment.id }}">
+                                            {% if comment.is_active %}Deactivate{% else %}Activate{% endif %}
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        {% endfor %}
+                    </div>
                 </div>
+            </div>
         </div>            
     </div>
 </section>

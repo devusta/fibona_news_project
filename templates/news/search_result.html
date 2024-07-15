@@ -1,30 +1,31 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %}Search Results | Fibona News{% endblock title %}
 
 {% block content %}
-    <section>
+    <section class="admin_min-height">
         {% if not news_list %}
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8">
                 <div class="single_post_content">
-                    <h2><span>Search Results</span></h2>
+                    <h2><span>{% blocktranslate %}Search Results{% endblocktranslate %}</span></h2>
                 </div>
                 <div class="left_content">
                     <div class="error_page">
-                        <h3>We Are Sorry</h3>
+                        <h3>{% blocktranslate %}We Are Sorry{% endblocktranslate %}</h3>
                         <h1>404</h1>
-                        <p>Unfortunately, the page you were looking for could not be found. It may be temporarily unavailable, moved or no longer exists</p>
-                        <span></span> <a href="{% url 'home' %}" class="wow fadeInLeftBig">Go to home page</a> 
+                        <p>{% blocktranslate %}Unfortunately, the page you were looking for could not be found. It may be temporarily unavailable, moved or no longer exists{% endblocktranslate %}</p>
+                        <span></span> <a href="{% url 'home' %}" class="wow fadeInLeftBig">{% blocktranslate %}Go to home page{% endblocktranslate %}</a> 
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4">
                 <aside class="right_content">
                   <div class="single_sidebar">
-                    <h2><span>Popular News</span></h2>
+                    <h2><span>{% blocktranslate %}Popular News{% endblocktranslate %}</span></h2>
                     <ul class="spost_nav">
                       {% for news in popular_news %}  
                       <li>
@@ -43,7 +44,7 @@
         </div>
         {% else %} 
         <div class="single_post_content">
-            <h2><span>Search Results</span></h2>
+            <h2><span>{% blocktranslate %}Search Results{% endblocktranslate %}</span></h2>
         </div>
         <div class="group_main_section">
             <ul class="group_main-item wow fadeInDown">

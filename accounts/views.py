@@ -6,7 +6,7 @@ from django.views.generic import View
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm, CustomProfileChangeForm
 from .models import CustomUser, Profile
-from news.models import Comment
+from news.models import Comment, News
 
 
 # class'ga asoslangan custom signup view
@@ -68,10 +68,12 @@ def admin_required(view_func):
 
 @admin_required
 def admin_page_view(request):
+    all_news = News.published.all().order_by('-publish_time')
     users = CustomUser.objects.all()
     admins = CustomUser.objects.filter(is_superuser=True)
     comments = Comment.objects.all()
     context = {
+        'all_news': all_news,
         'users': users,
         'admins': admins,
         'comments': comments

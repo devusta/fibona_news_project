@@ -11,3 +11,7 @@ def add_slashes(value):
         value = value + '/'
     return value
 
+
+@register.filter
+def add_lang_code(path, lang_code):
+    return f'/{lang_code}{path}'

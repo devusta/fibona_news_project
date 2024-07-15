@@ -1,12 +1,13 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %}Economical | Fibona News{% endblock title %}
 
 {% block content %}
     <div class="single_post_content">
-        <h2><span>Economical News</span></h2>
+        <h2><span>{% blocktranslate %}Economical News{% endblocktranslate %}</span></h2>
     </div>
     <div class="group_news_area">
         <div class="group_main_section">

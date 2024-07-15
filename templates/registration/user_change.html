@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block title %}Edit Profile | Fibona News{% endblock title %}
@@ -7,7 +8,7 @@
 {% block content %}
     
     <div class="single_post_content">
-        <h2><span>Edit Profile</span></h2>
+        <h2><span>{% blocktranslate %}Edit Profile{% endblocktranslate %}</span></h2>
     </div>
     <div class="single_post_content">
         <ul class="delete_section">
@@ -16,9 +17,9 @@
                     {{ user_form|crispy }}
                     {{ profile_form|crispy }}
                     <div class="">
-                        <button type="submit" class="btn btn-green">Save</button>
+                        <button type="submit" class="btn btn-green">{% blocktranslate %}Save{% endblocktranslate %}</button>
                         <div style="float: right;">
-                            <a href="{% url 'dashboard' %}" class="btn default-btn">My page</a>
+                            <a href="{% url 'dashboard' %}" class="btn default-btn">{% blocktranslate %}My page{% endblocktranslate %}</a>
                         </div>
                     </div> 
                 </form>                    

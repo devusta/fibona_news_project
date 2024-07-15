@@ -1,17 +1,17 @@
 {% extends 'news/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block title %}Signup | Fibona News{% endblock title %}
 
 {% block content %}
     
     <div class="single_post_content">
-        <h2><span>Login</span></h2>
+        <h2><span>{% blocktranslate %}Login{% endblocktranslate %}</span></h2>
     </div>
     <div class="single_post_content">
         <ul class="delete_section wow">
             <li>
-                <h2>Success!</h2>               
+                <h2>{% blocktranslate %}Success!{% endblocktranslate %}</h2>               
             </li>
         </ul>
     </div>

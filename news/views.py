@@ -202,8 +202,10 @@ class ContactView(TemplateView):
 
 class NewsUpdateView(CustomUserPassesTestMixin, UpdateView):
     model = News
-    fields = ['title', 'body', 'category', 'image', 'status']
     template_name = 'crud/news_edit.html'
+    fields = ['title', 'title_en', 'title_uz', 'title_ko', 'title_ru', 'slug',
+              'body', 'body_en', 'body_uz', 'body_ko', 'body_ru',
+              'category', 'image', 'status']
 
 
 class NewsDeleteView(CustomUserPassesTestMixin, DeleteView):
@@ -215,7 +217,9 @@ class NewsDeleteView(CustomUserPassesTestMixin, DeleteView):
 class NewsCreateView(CustomUserPassesTestMixin, CreateView):
     model = News
     template_name = 'crud/news_create.html'
-    fields = ['title', 'slug', 'body', 'category', 'image', 'status']
+    fields = ['title', 'title_en', 'title_uz', 'title_ko', 'title_ru', 'slug',
+              'body', 'body_en', 'body_uz', 'body_ko', 'body_ru',
+              'category', 'image', 'status']
 
 
 class SearchResultsView(ListView):

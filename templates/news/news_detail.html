@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load hitcount_tags %}
 
@@ -12,7 +13,7 @@
         <div class="left_content">
           <div class="single_page">
             <ol class="breadcrumb">
-              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'home' %}">{% blocktranslate %}Home{% endblocktranslate %}</a></li>
               {% for category, url in category_urls.items %}  
                   {% if category|stringformat:"s" == news.category.name %}
                   <li><a href="{% url url %}">{{ news.category.name | title }}</a></li>
@@ -22,9 +23,9 @@
             </ol>
             <h1>{{ news.title }}</h1>          
             <div class="post_commentbox nav" role="tablist"> 
-                <a href="#news_comments" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-user"></i>{% if comments.count > 0 %}{{ comments.count }}{% endif %} Comments</a>
+                <a href="#news_comments" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-user"></i>{% if comments.count > 0 %}{{ comments.count }}{% endif %} {% blocktranslate %}Comments{% endblocktranslate %}</a>
                 <span><i class="fa fa-calendar"></i>{{ news.publish_time|date:"d M Y" }}</span> 
-                <span><i class="fa fa-eye"></i>{% get_hit_count for news %} views</span>
+                <span><i class="fa fa-eye"></i>{% get_hit_count for news %} {% blocktranslate %}views{% endblocktranslate %}</span>
             </div>
             <div class="tab-content">  
               <div role="tabpanel" class="tab-pane" id="news_comments"> 
@@ -52,13 +53,13 @@
                 </ul>   
                 {% endfor %}
                 <div class="single_page_content">
-                  <h3>Add Comment</h3>
+                  <h3>{% blocktranslate %}Add a comment{% endblocktranslate %}</h3>
                   <form method="POST">{% csrf_token %}
                       {{ comment_form|crispy }}
-                      <button type="submit" class="btn btn-green">Submit</button>
+                      <button type="submit" class="btn btn-green">{% blocktranslate %}Submit{% endblocktranslate %}</button>
                   </form>
                 </div>
-                <a href="#close" aria-controls="messages" role="tab" data-toggle="tab">Close tab</a>
+                <a href="#close" aria-controls="messages" role="tab" data-toggle="tab">{% blocktranslate %}Close tab{% endblocktranslate %}</a>
               </div>   
               <div role="tabpanel" class="tab-pane" id="close"></div>
             </div>
@@ -66,16 +67,16 @@
               <p>{{ news.body|safe }}</p>
               {% if request.user.is_authenticated and request.user.is_superuser %}  
               <div class="">
-                  <a href="{% url 'news_edit' news.slug %}" class="btn btn-green">Edit</a>
-                  <a href="{% url 'news_delete' news.slug %}" class="btn btn-red">Delete</a>
+                  <a href="{% url 'news_edit' news.slug %}" class="btn btn-green">{% blocktranslate %}Edit{% endblocktranslate %}</a>
+                  <a href="{% url 'news_delete' news.slug %}" class="btn btn-red">{% blocktranslate %}Delete{% endblocktranslate %}</a>
               </div>  
               {% endif %}
             </div>
             <div class="single_page_content">
-                <h3>Add Comment</h3>
+                <h3>{% blocktranslate %}Add a comment{% endblocktranslate %}</h3>
                 <form method="POST">{% csrf_token %}
                     {{ comment_form|crispy }}
-                    <button type="submit" class="btn btn-green">Submit</button>
+                    <button type="submit" class="btn btn-green">{% blocktranslate %}Submit{% endblocktranslate %}</button>
                 </form>
             </div>
             <div class="social_link">
@@ -88,7 +89,7 @@
               </ul>
             </div>
             <div class="related_post">
-              <h2>Related News <i class="fa fa-thumbs-o-up"></i></h2>
+              <h2>{% blocktranslate %}Related News{% endblocktranslate %} <i class="fa fa-thumbs-o-up"></i></h2>
               <ul class="spost_nav wow fadeInDown animated">
                 {% for news in related_news %}  
                 <li>
@@ -105,13 +106,13 @@
       <nav class="nav-slit"> 
           <a class="prev" href="#"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
             <div>
-              <h3>Enjoy your trip</h3>
+              <h3>{% blocktranslate %}Enjoy your trip{% endblocktranslate %}</h3>
               <img src="{% static 'images/slit1.jpg' %}" alt=""/> 
             </div>
           </a> 
           <a class="next" href="#"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
             <div>
-              <h3>Enjoy your time with us</h3>
+              <h3>{% blocktranslate %}Enjoy your time with us{% endblocktranslate %}</h3>
               <img src="{% static 'images/slit2.jpg' %}" alt=""/> 
             </div>
           </a> 
@@ -119,7 +120,7 @@
       <div class="col-lg-4 col-md-4 col-sm-4">
         <aside class="right_content">
           <div class="single_sidebar">
-            <h2><span>Popular News</span></h2>
+            <h2><span>{% blocktranslate %}Popular News{% endblocktranslate %}</span></h2>
             <ul class="spost_nav">
               {% for news in popular_news %}  
               <li>
@@ -135,9 +136,9 @@
           </div>
           <div class="single_sidebar">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">Category</a></li>
-              <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">Video</a></li>
-              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">Comments</a></li>
+              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">{% blocktranslate %}Category{% endblocktranslate %}</a></li>
+              <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">{% blocktranslate %}Video{% endblocktranslate %}</a></li>
+              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">{% blocktranslate %}Comments{% endblocktranslate %}</a></li>
             </ul>
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="category">
@@ -175,16 +176,16 @@
             </div>
           </div>
           <div class="single_sidebar wow fadeInDown">
-            <h2><span>Category Archive</span></h2>
+            <h2><span>{% blocktranslate %}Category Archive{% endblocktranslate %}</span></h2>
             <select class="catgArchive">
-              <option>Select Category</option>
+              <option>{% blocktranslate %}Select Category{% endblocktranslate %}</option>
               {% for category in categories %}  
               <option>{{ category.name | title }}</option>
               {% endfor %}  
             </select>
           </div>
           <div class="single_sidebar wow fadeInDown">
-            <h2><span>Links</span></h2>
+            <h2><span>{% blocktranslate %}Links{% endblocktranslate %}</span></h2>
             <ul>
               <li><a href="#">Blog</a></li>
               <li><a href="#">Rss Feed</a></li>

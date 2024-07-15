@@ -1,0 +1,565 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\accounts\forms.py:12 .\accounts\forms.py:35
+msgid "Birth date"
+msgstr "생년월일"
+
+#: .\accounts\forms.py:13 .\accounts\forms.py:36
+msgid "Phone number"
+msgstr "연락처"
+
+#: .\accounts\forms.py:19 .\accounts\forms.py:31
+#: .\templates\pages\admin_page.html:68 .\templates\pages\admin_page.html:109
+msgid "Username"
+msgstr "사용자 이름"
+
+#: .\accounts\forms.py:20 .\accounts\forms.py:32
+msgid "First name"
+msgstr "이름"
+
+#: .\accounts\forms.py:21 .\accounts\forms.py:33
+msgid "Last name"
+msgstr "성"
+
+#: .\accounts\forms.py:22 .\accounts\forms.py:34
+#: .\templates\news\contact.html:21 .\templates\pages\admin_page.html:69
+#: .\templates\pages\admin_page.html:112 .\templates\pages\dashboard.html:63
+#: .\templates\pages\user_info.html:58
+msgid "Email"
+msgstr "이메일"
+
+#: .\accounts\forms.py:45
+msgid "Photo"
+msgstr "사진"
+
+#: .\accounts\forms.py:46
+msgid "Address"
+msgstr "주소"
+
+#: .\config\settings.py:126
+msgid "English"
+msgstr "영어"
+
+#: .\config\settings.py:127
+msgid "Uzbek"
+msgstr "우즈벡어"
+
+#: .\config\settings.py:128
+msgid "Russian"
+msgstr "러시아어"
+
+#: .\config\settings.py:129
+msgid "Korean"
+msgstr "한국어"
+
+#: .\templates\crud\news_create.html:14 .\templates\news\base.html:129
+#: .\templates\pages\admin_page.html:29
+msgid "Add News"
+msgstr "뉴스 추가"
+
+#: .\templates\crud\news_create.html:23
+msgid "Go Home"
+msgstr "홈으로 가기"
+
+#: .\templates\crud\news_create.html:24
+#: .\templates\registration\password_reset_confirm.html:25
+#: .\templates\registration\user_change.html:20
+msgid "Save"
+msgstr "저장"
+
+#: .\templates\crud\news_delete.html:9
+msgid "Delete News"
+msgstr "뉴스 삭제"
+
+#: .\templates\crud\news_delete.html:25
+msgid "Do you want to delete the news"
+msgstr "다음 뉴스를 삭제하시겠습니까"
+
+#: .\templates\crud\news_delete.html:28 .\templates\crud\news_edit.html:19
+msgid "Go Back"
+msgstr "뒤로 가기"
+
+#: .\templates\crud\news_delete.html:29 .\templates\news\news_detail.html:71
+msgid "Delete"
+msgstr "삭제"
+
+#: .\templates\crud\news_edit.html:10
+msgid "Edit News"
+msgstr "뉴스 수정"
+
+#: .\templates\crud\news_edit.html:20 .\templates\news\news_detail.html:70
+msgid "Edit"
+msgstr "수정"
+
+#: .\templates\news\about.html:15
+msgid "About Us"
+msgstr "기어 소개"
+
+#: .\templates\news\about.html:38 .\templates\news\contact.html:31
+#: .\templates\news\home.html:228 .\templates\news\news_detail.html:123
+#: .\templates\news\search_result.html:28
+#: .\templates\registration\logged_out.html:28
+#: .\templates\registration\password_change_done.html:27
+#: .\templates\registration\password_reset_complete.html:27
+#: .\templates\registration\password_reset_confirm.html:46
+#: .\templates\registration\password_reset_done.html:38
+#: .\templates\registration\password_reset_form.html:44
+msgid "Popular News"
+msgstr "인기 뉴스"
+
+#: .\templates\news\base.html:42 .\templates\news\base.html:119
+#: .\templates\news\news_detail.html:16
+msgid "Home"
+msgstr "홈"
+
+#: .\templates\news\base.html:45
+msgid "About"
+msgstr "기업 소개"
+
+#: .\templates\news\base.html:48 .\templates\news\base.html:194
+msgid "Contact"
+msgstr "문의"
+
+#: .\templates\news\base.html:54
+msgid "AdminPage"
+msgstr "관리페이지"
+
+#: .\templates\news\base.html:58
+msgid "MyPage"
+msgstr "마이페이지"
+
+#: .\templates\news\base.html:62 .\templates\pages\dashboard.html:32
+#: .\templates\registration\logged_out.html:15
+msgid "Logout"
+msgstr "로그아웃"
+
+#: .\templates\news\base.html:68 .\templates\registration\logged_out.html:21
+#: .\templates\registration\login.html:10
+#: .\templates\registration\password_change_done.html:20
+#: .\templates\registration\password_reset_complete.html:20
+#: .\templates\registration\signup.html:22
+#: .\templates\registration\signup_done.html:9
+msgid "Login"
+msgstr "로그인"
+
+#: .\templates\news\base.html:69
+msgid "SignUp"
+msgstr "가입"
+
+#: .\templates\news\base.html:126 .\templates\news\news_list.html:10
+#: .\templates\pages\admin_page.html:18
+msgid "All News"
+msgstr "모든 뉴스"
+
+#: .\templates\news\base.html:134 .\templates\news\base.html:135
+msgid "Search"
+msgstr "찾기"
+
+#: .\templates\news\base.html:146
+msgid "Latest News"
+msgstr "최근 뉴스"
+
+#: .\templates\news\base.html:179
+msgid "Images"
+msgstr "이미지"
+
+#: .\templates\news\base.html:184
+msgid "Tag"
+msgstr "태그"
+
+#: .\templates\news\contact.html:15
+msgid "Contact Us"
+msgstr "문의"
+
+#: .\templates\news\contact.html:17
+msgid ""
+"If you have any questions or suggestions for us, you can contact us quickly "
+"and easily by filling out the form below!"
+msgstr ""
+"질문이나 제안 사항이 있으시면 아래 양식을 작성하여 빠르고 쉽게 보내주세요!"
+
+#: .\templates\news\contact.html:20
+msgid "Name"
+msgstr "이름"
+
+#: .\templates\news\contact.html:22
+msgid "Message"
+msgstr "메시지"
+
+#: .\templates\news\contact.html:23
+msgid "Send Message"
+msgstr "보내기"
+
+#: .\templates\news\economic_news.html:10
+msgid "Economical News"
+msgstr "경제"
+
+#: .\templates\news\home.html:27
+msgid "Latest news"
+msgstr "최근 뉴스"
+
+#: .\templates\news\home.html:55
+msgid "Social"
+msgstr "사회"
+
+#: .\templates\news\home.html:91
+msgid "Science"
+msgstr "과학"
+
+#: .\templates\news\home.html:123
+msgid "Technology"
+msgstr "기술"
+
+#: .\templates\news\home.html:155
+msgid "Sport"
+msgstr "스포츠"
+
+#: .\templates\news\home.html:189
+msgid "Photography"
+msgstr "사진장"
+
+#: .\templates\news\home.html:244 .\templates\news\news_detail.html:139
+#: .\templates\pages\admin_page.html:44
+msgid "Category"
+msgstr "카테고리"
+
+#: .\templates\news\home.html:245 .\templates\news\news_detail.html:140
+msgid "Video"
+msgstr "영상"
+
+#: .\templates\news\home.html:246 .\templates\news\news_detail.html:26
+#: .\templates\news\news_detail.html:141 .\templates\pages\admin_page.html:24
+msgid "Comments"
+msgstr "코멘트"
+
+#: .\templates\news\home.html:284
+msgid "Sponsor"
+msgstr "스폰서"
+
+#: .\templates\news\home.html:287 .\templates\news\news_detail.html:179
+msgid "Category Archive"
+msgstr "카테고리"
+
+#: .\templates\news\home.html:289 .\templates\news\news_detail.html:181
+msgid "Select Category"
+msgstr "선택 카테고리"
+
+#: .\templates\news\home.html:296 .\templates\news\news_detail.html:188
+msgid "Links"
+msgstr "링크"
+
+#: .\templates\news\news_detail.html:28
+msgid "views"
+msgstr "조화수"
+
+#: .\templates\news\news_detail.html:56 .\templates\news\news_detail.html:76
+msgid "Add a comment"
+msgstr "코멘트 추가"
+
+#: .\templates\news\news_detail.html:59 .\templates\news\news_detail.html:79
+msgid "Submit"
+msgstr "보내기"
+
+#: .\templates\news\news_detail.html:62
+msgid "Close tab"
+msgstr "장을 닫기"
+
+#: .\templates\news\news_detail.html:92
+msgid "Related News"
+msgstr "관련 뉴스"
+
+#: .\templates\news\news_detail.html:109
+msgid "Enjoy your trip"
+msgstr "즐기는 여행"
+
+#: .\templates\news\news_detail.html:115
+msgid "Enjoy your time with us"
+msgstr "같이 여행을 떠나자"
+
+#: .\templates\news\science_news.html:10
+msgid "Science News"
+msgstr "과학 뉴스"
+
+#: .\templates\news\search_result.html:14
+#: .\templates\news\search_result.html:47
+msgid "Search Results"
+msgstr "검색 결과"
+
+#: .\templates\news\search_result.html:18
+msgid "We Are Sorry"
+msgstr "좌송합니다"
+
+#: .\templates\news\search_result.html:20
+msgid ""
+"Unfortunately, the page you were looking for could not be found. It may be "
+"temporarily unavailable, moved or no longer exists"
+msgstr ""
+"안타깝게도 원하시는 페이지를 찾을 수 없습니다. 일시적으로 사용할 수 없거나 이"
+"동되었거나 더 이상 존재하지 않을 수 있습니다."
+
+#: .\templates\news\search_result.html:21
+msgid "Go to home page"
+msgstr "홈으로 가기"
+
+#: .\templates\news\social_news.html:10
+msgid "Social News"
+msgstr "소셜 뉴스"
+
+#: .\templates\news\sport_news.html:10
+msgid "Sport News"
+msgstr "스포츠 뉴스"
+
+#: .\templates\news\tech_news.html:10
+msgid "Technology News"
+msgstr "기술의 세계"
+
+#: .\templates\news\world_news.html:10
+msgid "World News"
+msgstr "세계 뉴스"
+
+#: .\templates\pages\admin_page.html:13
+msgid "Administration"
+msgstr "관리자 페이지"
+
+#: .\templates\pages\admin_page.html:20
+msgid "All Users"
+msgstr "모든 사용자"
+
+#: .\templates\pages\admin_page.html:22
+msgid "Admins"
+msgstr "관리자"
+
+#: .\templates\pages\admin_page.html:30
+msgid "Add User"
+msgstr "사용자 추가"
+
+#: .\templates\pages\admin_page.html:41 .\templates\pages\admin_page.html:67
+#: .\templates\pages\admin_page.html:108
+msgid "Num"
+msgstr "서수"
+
+#: .\templates\pages\admin_page.html:42
+msgid "News Title"
+msgstr "뉴스 제목"
+
+#: .\templates\pages\admin_page.html:43
+msgid "Views"
+msgstr "조회수"
+
+#: .\templates\pages\admin_page.html:45 .\templates\pages\admin_page.html:72
+#: .\templates\pages\admin_page.html:114
+msgid "View"
+msgstr "조화"
+
+#: .\templates\pages\admin_page.html:55 .\templates\pages\admin_page.html:95
+#: .\templates\pages\admin_page.html:126
+msgid "Detail"
+msgstr "세부정보"
+
+#: .\templates\pages\admin_page.html:70
+msgid "Staff Status"
+msgstr "직원 현황"
+
+#: .\templates\pages\admin_page.html:71
+msgid "Activity"
+msgstr "활성 상태"
+
+#: .\templates\pages\admin_page.html:90
+msgid "Active"
+msgstr "활성"
+
+#: .\templates\pages\admin_page.html:92
+msgid "No active"
+msgstr "비활성"
+
+#: .\templates\pages\admin_page.html:110 .\templates\pages\dashboard.html:45
+#: .\templates\pages\user_info.html:40
+msgid "First Name"
+msgstr "이름"
+
+#: .\templates\pages\admin_page.html:111 .\templates\pages\dashboard.html:54
+#: .\templates\pages\user_info.html:49
+msgid "Last Name"
+msgstr "성"
+
+#: .\templates\pages\admin_page.html:113
+msgid "Last Login"
+msgstr "마지막 로그인"
+
+#: .\templates\pages\dashboard.html:9
+msgid "My Page"
+msgstr "마이페이지"
+
+#: .\templates\pages\dashboard.html:29 .\templates\pages\user_info.html:29
+msgid "Joined at"
+msgstr "가입 날짜"
+
+#: .\templates\pages\dashboard.html:30
+msgid "Change password"
+msgstr "비밀번호 바꾸기"
+
+#: .\templates\pages\dashboard.html:72 .\templates\pages\user_info.html:67
+msgid "Phone"
+msgstr "전화"
+
+#: .\templates\pages\dashboard.html:81 .\templates\pages\user_info.html:76
+msgid "Date of birth"
+msgstr "생년월일"
+
+#: .\templates\pages\dashboard.html:90
+#: .\templates\registration\user_change.html:11
+msgid "Edit Profile"
+msgstr "수정하기"
+
+#: .\templates\pages\user_info.html:8
+msgid "User Info"
+msgstr "사용자 정보"
+
+#: .\templates\pages\user_info.html:28
+msgid "Last login"
+msgstr "마지막 로그인"
+
+#: .\templates\pages\user_info.html:86
+msgid "Deactivate"
+msgstr "비활성화하기"
+
+#: .\templates\pages\user_info.html:86
+msgid "Activate"
+msgstr "활성화하기"
+
+#: .\templates\pages\user_info.html:90
+msgid "Users List"
+msgstr "사용자 목록"
+
+#: .\templates\registration\logged_out.html:18
+msgid "You are logged out"
+msgstr "로그아웃되었습니다"
+
+#: .\templates\registration\logged_out.html:20
+msgid "You can use the service by logging in again"
+msgstr "다시 로그인 하셔서 서비스를 이용하실 수 있습니다"
+
+#: .\templates\registration\login.html:20
+#: .\templates\registration\password_reset_form.html:23
+msgid "Forgot password?"
+msgstr "비밀번호를 잊으셨나요?"
+
+#: .\templates\registration\login.html:21
+#: .\templates\registration\password_reset_form.html:17
+msgid "Password reset"
+msgstr "비밀번호 초기화"
+
+#: .\templates\registration\login.html:24
+msgid "Does your profile not exist"
+msgstr "프로필이 없나요"
+
+#: .\templates\registration\login.html:24
+#: .\templates\registration\signup.html:11
+#: .\templates\registration\signup.html:19
+msgid "Signup"
+msgstr "가입"
+
+#: .\templates\registration\password_change_done.html:14
+#: .\templates\registration\password_change_done.html:17
+#: .\templates\registration\password_reset_complete.html:14
+msgid "Password changed"
+msgstr "비밀번호가 변경되었습니다"
+
+#: .\templates\registration\password_change_done.html:19
+#: .\templates\registration\password_reset_complete.html:19
+msgid "You can log in the site with the new password."
+msgstr "새로운 비밀번호로 사이트에 로그인하실 수 있습니다."
+
+#: .\templates\registration\password_change_form.html:10
+msgid "Password change"
+msgstr "비밀먼호 변경"
+
+#: .\templates\registration\password_change_form.html:18
+msgid "Change"
+msgstr "변경"
+
+#: .\templates\registration\password_change_form.html:19
+msgid "Go back"
+msgstr "뒤로"
+
+#: .\templates\registration\password_reset_complete.html:17
+msgid "Password changed!"
+msgstr "비밀번호가 변경되었습니다!"
+
+#: .\templates\registration\password_reset_confirm.html:16
+msgid "Create a new password!"
+msgstr "새로운 비밀번호를 만드세요!"
+
+#: .\templates\registration\password_reset_confirm.html:33
+msgid "This link is not valid or may have been used before!"
+msgstr "이 링크는 유효하지 않거나 이전에 사용되었을 수 있습니다!"
+
+#: .\templates\registration\password_reset_confirm.html:34
+msgid "You can try again by"
+msgstr "다시 시도할 수 있습니다"
+
+#: .\templates\registration\password_reset_confirm.html:34
+#: .\templates\registration\password_reset_done.html:28
+msgid "Resend"
+msgstr "재전송"
+
+#: .\templates\registration\password_reset_done.html:15
+msgid "Email sent"
+msgstr "메일이 전송되었습니다"
+
+#: .\templates\registration\password_reset_done.html:21
+msgid "Check your email"
+msgstr "이메일 확인"
+
+#: .\templates\registration\password_reset_done.html:24
+msgid "Password reset instructions have been sent to your email address"
+msgstr "비밀번호 재설정 지침이 귀하의 이메일 주소로 전송되었습니다."
+
+#: .\templates\registration\password_reset_form.html:26
+msgid ""
+"Enter your email address below, and we'll send you a password reset guide!"
+msgstr "아래에 이메일 주소를 입력하시면 비밀번호 재설정 안내를 보내드립니다!"
+
+#: .\templates\registration\password_reset_form.html:32
+msgid "Send"
+msgstr "보내기"
+
+#: .\templates\registration\password_reset_form.html:33
+msgid "Login page"
+msgstr "로그인 페이지"
+
+#: .\templates\registration\signup.html:21
+msgid "Already have an account?"
+msgstr "이미 계정이 있나요?"
+
+#: .\templates\registration\signup_done.html:14
+msgid "Success!"
+msgstr "성공!"
+
+#: .\templates\registration\user_change.html:22
+msgid "My page"
+msgstr "마이페이지"
+
+#~ msgid "User"
+#~ msgstr "사용자님"
+
+#~ msgid "Welcome"
+#~ msgstr "환영합니다"

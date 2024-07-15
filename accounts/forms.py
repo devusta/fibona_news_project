@@ -15,18 +15,36 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
         model = CustomUser
         fields = ('username', 'first_name', 'last_name', 'email', 'birth_date', 'phone_number')
+        labels = {
+            'username': _('Username'),
+            'first_name': _('First name'),
+            'last_name': _('Last name'),
+            'email': _('Email'),
+        }
 
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta(UserChangeForm):
         model = CustomUser
         fields = ('username', 'first_name', 'last_name', 'email', 'birth_date', 'phone_number')
+        labels = {
+            'username': _('Username'),
+            'first_name': _('First name'),
+            'last_name': _('Last name'),
+            'email': _('Email'),
+            'birth_date': _('Birth date'),
+            'phone_number': _('Phone number'),
+        }
 
 
 class CustomProfileChangeForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ('photo', 'address')
+        labels = {
+            'photo': _('Photo'),
+            'address': _('Address'),
+        }
 
 
 # # CustomUserCreationForm with ModelForm

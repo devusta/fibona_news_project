@@ -18,6 +18,37 @@
     background-color:#d083cf;
 }
 
+.language-form {
+    background-color: #2C2C2C;
+    display: inline-block;
+    float: right;
+    margin-top: 11px;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.5s;
+}
+
+.language-form:hover {
+    background-color: #D083CF;
+    border-radius: 3px;
+}
+
+.language-form select {
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+
+.language-form select:hover {
+    border: none;
+    color: #fff;
+}
+
+.language-form select option {
+    background-color: #fff;
+    color: #D083CF;
+}
+
 .custom_nav_item {
     border: none;
     padding: 10px;
@@ -81,9 +112,22 @@
 
 /*home.html css*/
 .search-input {
-    margin: 10px 0 10px 50px;
+    margin: 10px 0 10px 10px;
     display: inline;
     width: auto;
+}
+
+.search-btn {
+    border-radius: 4px;
+    padding: 6px 12px;
+    border: none;
+    min-width: 64px;
+    transition: all 0.5s;
+}
+
+.search-btn:hover {
+    background-color: #D083CF;
+    color: #fff;
 }
 
 .custom-font {
@@ -114,6 +158,62 @@
 /*Admin_page style*/
 .admin_min-height {
     min-height: 95vh;
+}
+
+.admin_nav-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    background:none repeat scroll 0 0 #333;
+    border-bottom:none
+}
+
+.admin_nav-tabs > li {
+    margin-bottom:0
+}
+
+.admin_nav-tabs > li > a {
+    margin-right:0;
+    color:#fff;
+    font-size:15px;
+    border-radius:0;
+    border:none;
+    font-family:"Oswald",sans-serif;
+    -webkit-transition:all 0.5s;
+    -mz-transition:all 0.5s;
+    -ms-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    transition:all 0.5s
+}
+
+.admin_nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    color:#fff !important; border:none
+}
+
+.admin_nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border-width:0;
+    border-color:#ddd #ddd transparent;
+    color:#fff
+}
+
+.admin_nav-tabs > li {
+    display: inline-block;
+    float: none;
+    flex-grow: 1
+}
+
+.admin_nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    background-color:#d083cf
+}
+
+.admin_nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color:#d083cf
 }
 
 .custom-overflow {
@@ -266,6 +366,19 @@
     margin: 20px 0 20px;
 }
 
+/*Dashboard style*/
+.btn-out-theme {
+    border: 1px solid #D083CF;
+    transition: all 0.5s;
+}
+
+.btn-out-theme:hover {
+    border-color: #fff;
+    background-color: #D083CF;
+    color: #fff;
+}
+
+
 @media(max-width:767px) {
     .search-input {
         margin-left: 0;
@@ -284,6 +397,12 @@
 }
 
 @media(max-width:360px ) {
+    .language-form {
+        display: inline-block;
+        float: left;
+        margin-top: 0;
+    }
+
     .group_main_section {
         flex-wrap: wrap;
     }

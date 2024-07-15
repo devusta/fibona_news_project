@@ -1,11 +1,11 @@
 {% extends 'news/base.html' %}
 {% load static %}
-
+{% load i18n %}
 {% block title %}User Info | Fibona News{% endblock title %}
 
 {% block content %}
     <div class="single_post_content">
-        <h2><span>User Info</span></h2>
+        <h2><span>{% blocktranslate %}User Info{% endblocktranslate %}</span></h2>
     </div>
     <div class="clr"></div>
     <div class="container">
@@ -25,8 +25,8 @@
                     <div class="margin-top">
                         <h4>{{ view_user.username }}</h4>
                         <h6 class="text-secondary mb-1">{{ view_user.profile.address }}</h6>
-                        <h6 class="text-muted font-size-sm">Last login {{ view_user.last_login | date:"Y/m/d H:i" }}</h6>
-                        <h6 class="text-muted font-size-sm">Joined at {{ view_user.date_joined | date:"Y/m/d" }}</h6>
+                        <h6 class="text-muted font-size-sm">{% blocktranslate %}Last login{% endblocktranslate %} {{ view_user.last_login | date:"Y/m/d H:i" }}</h6>
+                        <h6 class="text-muted font-size-sm">{% blocktranslate %}Joined at{% endblocktranslate %} {{ view_user.date_joined | date:"Y/m/d" }}</h6>
                     </div>
                   </div>
                 </div>
@@ -37,7 +37,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">First Name</h6>
+                      <h6 class="mb-0">{% blocktranslate %}First Name{% endblocktranslate %}</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ view_user.first_name }}
@@ -46,7 +46,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Last Name</h6>
+                      <h6 class="mb-0">{% blocktranslate %}Last Name{% endblocktranslate %}</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{ view_user.last_name }}
@@ -55,7 +55,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
+                      <h6 class="mb-0">{% blocktranslate %}Email{% endblocktranslate %}</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{ view_user.email }}
@@ -64,7 +64,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
+                      <h6 class="mb-0">{% blocktranslate %}Phone{% endblocktranslate %}</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{ view_user.phone_number }}
@@ -73,7 +73,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Date of birth</h6>
+                      <h6 class="mb-0">{% blocktranslate %}Date of birth{% endblocktranslate %}</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                       {{ view_user.birth_date }}
@@ -83,11 +83,11 @@
                   <div class="row">
                     <div class="col-sm-6">
                         <a class="btn btn-warning toggle-user-status" data-user-id="{{ view_user.id }}">
-                            {% if view_user.is_active %}Deactivate{% else %}Activate{% endif %}
+                            {% if view_user.is_active %}{% blocktranslate %}Deactivate{% endblocktranslate %}{% else %}{% blocktranslate %}Activate{% endblocktranslate %}{% endif %}
                         </a>
                     </div>
                     <div class="col-sm-6">
-                      <a class="btn btn-info " href="{% url 'admin_page' %}">Users List</a>
+                      <a class="btn btn-info " href="{% url 'admin_page' %}">{% blocktranslate %}Users List{% endblocktranslate %}</a>
                     </div>
                   </div>
                 </div>

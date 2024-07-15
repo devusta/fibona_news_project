@@ -1,0 +1,570 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-14 00:52+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\accounts\forms.py:12 .\accounts\forms.py:35
+msgid "Birth date"
+msgstr "Tug'ilgan sana"
+
+#: .\accounts\forms.py:13 .\accounts\forms.py:36
+msgid "Phone number"
+msgstr "Telefon"
+
+#: .\accounts\forms.py:19 .\accounts\forms.py:31
+#: .\templates\pages\admin_page.html:68 .\templates\pages\admin_page.html:109
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+#: .\accounts\forms.py:20 .\accounts\forms.py:32
+msgid "First name"
+msgstr "Ism"
+
+#: .\accounts\forms.py:21 .\accounts\forms.py:33
+msgid "Last name"
+msgstr "Familiya"
+
+#: .\accounts\forms.py:22 .\accounts\forms.py:34
+#: .\templates\news\contact.html:21 .\templates\pages\admin_page.html:69
+#: .\templates\pages\admin_page.html:112 .\templates\pages\dashboard.html:63
+#: .\templates\pages\user_info.html:58
+msgid "Email"
+msgstr "Elektron pochta"
+
+#: .\accounts\forms.py:45
+msgid "Photo"
+msgstr "Rasm"
+
+#: .\accounts\forms.py:46
+msgid "Address"
+msgstr "Manzil"
+
+#: .\config\settings.py:126
+msgid "English"
+msgstr "Ingliz"
+
+#: .\config\settings.py:127
+msgid "Uzbek"
+msgstr "Uz"
+
+#: .\config\settings.py:128
+msgid "Russian"
+msgstr "Rus"
+
+#: .\config\settings.py:129
+msgid "Korean"
+msgstr "Koreys"
+
+#: .\templates\crud\news_create.html:14 .\templates\news\base.html:129
+#: .\templates\pages\admin_page.html:29
+msgid "Add News"
+msgstr "Yangilik qo'shish"
+
+#: .\templates\crud\news_create.html:23
+msgid "Go Home"
+msgstr "Bosh sahifa"
+
+#: .\templates\crud\news_create.html:24
+#: .\templates\registration\password_reset_confirm.html:25
+#: .\templates\registration\user_change.html:20
+msgid "Save"
+msgstr "Saqlash"
+
+#: .\templates\crud\news_delete.html:9
+msgid "Delete News"
+msgstr "Yangilikni O'chirish"
+
+#: .\templates\crud\news_delete.html:25
+msgid "Do you want to delete the news"
+msgstr "Ushbu yangilikni o'shirmoqchimisiz"
+
+#: .\templates\crud\news_delete.html:28 .\templates\crud\news_edit.html:19
+msgid "Go Back"
+msgstr "Orqaga"
+
+#: .\templates\crud\news_delete.html:29 .\templates\news\news_detail.html:71
+msgid "Delete"
+msgstr "O'chirish"
+
+#: .\templates\crud\news_edit.html:10
+msgid "Edit News"
+msgstr "Yangilik Qo'shish"
+
+#: .\templates\crud\news_edit.html:20 .\templates\news\news_detail.html:70
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: .\templates\news\about.html:15
+msgid "About Us"
+msgstr "Biz Haqimizda"
+
+#: .\templates\news\about.html:38 .\templates\news\contact.html:31
+#: .\templates\news\home.html:228 .\templates\news\news_detail.html:123
+#: .\templates\news\search_result.html:28
+#: .\templates\registration\logged_out.html:28
+#: .\templates\registration\password_change_done.html:27
+#: .\templates\registration\password_reset_complete.html:27
+#: .\templates\registration\password_reset_confirm.html:46
+#: .\templates\registration\password_reset_done.html:38
+#: .\templates\registration\password_reset_form.html:44
+msgid "Popular News"
+msgstr "Mashhur"
+
+#: .\templates\news\base.html:42 .\templates\news\base.html:119
+#: .\templates\news\news_detail.html:16
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\templates\news\base.html:45
+msgid "About"
+msgstr "Biz haqimizda"
+
+#: .\templates\news\base.html:48 .\templates\news\base.html:194
+msgid "Contact"
+msgstr "Aloqa"
+
+#: .\templates\news\base.html:54
+msgid "AdminPage"
+msgstr "Admin"
+
+#: .\templates\news\base.html:58
+msgid "MyPage"
+msgstr "Shaxsiy"
+
+#: .\templates\news\base.html:62 .\templates\pages\dashboard.html:32
+#: .\templates\registration\logged_out.html:15
+msgid "Logout"
+msgstr "Chiqish"
+
+#: .\templates\news\base.html:68 .\templates\registration\logged_out.html:21
+#: .\templates\registration\login.html:10
+#: .\templates\registration\password_change_done.html:20
+#: .\templates\registration\password_reset_complete.html:20
+#: .\templates\registration\signup.html:22
+#: .\templates\registration\signup_done.html:9
+msgid "Login"
+msgstr "Kirish"
+
+#: .\templates\news\base.html:69
+msgid "SignUp"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\templates\news\base.html:126 .\templates\news\news_list.html:10
+#: .\templates\pages\admin_page.html:18
+msgid "All News"
+msgstr "Yangiliklar"
+
+#: .\templates\news\base.html:134 .\templates\news\base.html:135
+msgid "Search"
+msgstr "Qidirish"
+
+#: .\templates\news\base.html:146
+msgid "Latest News"
+msgstr "Eng so'nggi"
+
+#: .\templates\news\base.html:179
+msgid "Images"
+msgstr "Tasvirlar"
+
+#: .\templates\news\base.html:184
+msgid "Tag"
+msgstr "Teglar"
+
+#: .\templates\news\contact.html:15
+msgid "Contact Us"
+msgstr "Aloqa"
+
+#: .\templates\news\contact.html:17
+msgid ""
+"If you have any questions or suggestions for us, you can contact us quickly "
+"and easily by filling out the form below!"
+msgstr ""
+"Agar savol va takliflaringiz bo'lsa, quyidagi shaklni to'ldirish orqali biz "
+"bilan tez va oson bog'lanishingiz mumkin!"
+
+#: .\templates\news\contact.html:20
+msgid "Name"
+msgstr "Ism"
+
+#: .\templates\news\contact.html:22
+msgid "Message"
+msgstr "Xabar"
+
+#: .\templates\news\contact.html:23
+msgid "Send Message"
+msgstr "Yuborish"
+
+#: .\templates\news\economic_news.html:10
+msgid "Economical News"
+msgstr "Iqtisodiy"
+
+#: .\templates\news\home.html:27
+msgid "Latest news"
+msgstr "Eng so'nggi"
+
+#: .\templates\news\home.html:55
+msgid "Social"
+msgstr "Ijtomoiy"
+
+#: .\templates\news\home.html:91
+msgid "Science"
+msgstr "Ilm-fan"
+
+#: .\templates\news\home.html:123
+msgid "Technology"
+msgstr "Texnologiya"
+
+#: .\templates\news\home.html:155
+msgid "Sport"
+msgstr "Sport"
+
+#: .\templates\news\home.html:189
+msgid "Photography"
+msgstr "Fotografiya"
+
+#: .\templates\news\home.html:244 .\templates\news\news_detail.html:139
+#: .\templates\pages\admin_page.html:44
+msgid "Category"
+msgstr "Kategoriya"
+
+#: .\templates\news\home.html:245 .\templates\news\news_detail.html:140
+msgid "Video"
+msgstr "Video"
+
+#: .\templates\news\home.html:246 .\templates\news\news_detail.html:26
+#: .\templates\news\news_detail.html:141 .\templates\pages\admin_page.html:24
+msgid "Comments"
+msgstr "Izohlar"
+
+#: .\templates\news\home.html:284
+msgid "Sponsor"
+msgstr "Homiy"
+
+#: .\templates\news\home.html:287 .\templates\news\news_detail.html:179
+msgid "Category Archive"
+msgstr "Kategoriyalar"
+
+#: .\templates\news\home.html:289 .\templates\news\news_detail.html:181
+msgid "Select Category"
+msgstr "Kategoriyani tanlang"
+
+#: .\templates\news\home.html:296 .\templates\news\news_detail.html:188
+msgid "Links"
+msgstr "Havolalar"
+
+#: .\templates\news\news_detail.html:28
+msgid "views"
+msgstr "ko'rishlar"
+
+#: .\templates\news\news_detail.html:56 .\templates\news\news_detail.html:76
+msgid "Add a comment"
+msgstr "Izoh yozish"
+
+#: .\templates\news\news_detail.html:59 .\templates\news\news_detail.html:79
+msgid "Submit"
+msgstr "Yuborish"
+
+#: .\templates\news\news_detail.html:62
+msgid "Close tab"
+msgstr "Yopish"
+
+#: .\templates\news\news_detail.html:92
+msgid "Related News"
+msgstr "Aloqador Yangiliklar"
+
+#: .\templates\news\news_detail.html:109
+msgid "Enjoy your trip"
+msgstr "Sayohatdan zaqvlaning"
+
+#: .\templates\news\news_detail.html:115
+msgid "Enjoy your time with us"
+msgstr "Vaqtingizni biz bilan maroqli o'tkazing"
+
+#: .\templates\news\science_news.html:10
+msgid "Science News"
+msgstr "Ilm-fan Yangiliklari"
+
+#: .\templates\news\search_result.html:14
+#: .\templates\news\search_result.html:47
+msgid "Search Results"
+msgstr "Qidiruv natijasi"
+
+#: .\templates\news\search_result.html:18
+msgid "We Are Sorry"
+msgstr "Uzur so'raymiz"
+
+#: .\templates\news\search_result.html:20
+msgid ""
+"Unfortunately, the page you were looking for could not be found. It may be "
+"temporarily unavailable, moved or no longer exists"
+msgstr ""
+"Afsuski, siz qidirayotgan sahifa topilmadi. Vaqtincha to'xtatilgan yoki "
+"o'chirilgan bo'lishi mumkin"
+
+#: .\templates\news\search_result.html:21
+msgid "Go to home page"
+msgstr "Bosh sahifa"
+
+#: .\templates\news\social_news.html:10
+msgid "Social News"
+msgstr "Ijtomoiy Yangiliklar"
+
+#: .\templates\news\sport_news.html:10
+msgid "Sport News"
+msgstr "Sport Yangiliklari"
+
+#: .\templates\news\tech_news.html:10
+msgid "Technology News"
+msgstr "Texnologiya Yangiliklari"
+
+#: .\templates\news\world_news.html:10
+msgid "World News"
+msgstr "Dunyo Yangiliklari"
+
+#: .\templates\pages\admin_page.html:13
+msgid "Administration"
+msgstr "Adminlar Xonasi"
+
+#: .\templates\pages\admin_page.html:20
+msgid "All Users"
+msgstr "Foydlanuvchilar"
+
+#: .\templates\pages\admin_page.html:22
+msgid "Admins"
+msgstr "Adminlar"
+
+#: .\templates\pages\admin_page.html:30
+msgid "Add User"
+msgstr "Foydalanuvchi qo'shish"
+
+#: .\templates\pages\admin_page.html:41 .\templates\pages\admin_page.html:67
+#: .\templates\pages\admin_page.html:108
+msgid "Num"
+msgstr "T/r"
+
+#: .\templates\pages\admin_page.html:42
+msgid "News Title"
+msgstr "Yanglik mavzusi"
+
+#: .\templates\pages\admin_page.html:43
+msgid "Views"
+msgstr "Ko'rishlar soni"
+
+#: .\templates\pages\admin_page.html:45 .\templates\pages\admin_page.html:72
+#: .\templates\pages\admin_page.html:114
+msgid "View"
+msgstr "Ko'rish"
+
+#: .\templates\pages\admin_page.html:55 .\templates\pages\admin_page.html:95
+#: .\templates\pages\admin_page.html:126
+msgid "Detail"
+msgstr "Batafsil"
+
+#: .\templates\pages\admin_page.html:70
+msgid "Staff Status"
+msgstr "Hodimlik holati"
+
+#: .\templates\pages\admin_page.html:71
+msgid "Activity"
+msgstr "Faolligi"
+
+#: .\templates\pages\admin_page.html:90
+msgid "Active"
+msgstr "Faol"
+
+#: .\templates\pages\admin_page.html:92
+msgid "No active"
+msgstr "Faol emas"
+
+#: .\templates\pages\admin_page.html:110 .\templates\pages\dashboard.html:45
+#: .\templates\pages\user_info.html:40
+msgid "First Name"
+msgstr "Ism"
+
+#: .\templates\pages\admin_page.html:111 .\templates\pages\dashboard.html:54
+#: .\templates\pages\user_info.html:49
+msgid "Last Name"
+msgstr "Familiya"
+
+#: .\templates\pages\admin_page.html:113
+msgid "Last Login"
+msgstr "Oxirgi Login"
+
+#: .\templates\pages\dashboard.html:9
+msgid "My Page"
+msgstr "Shaxsiy"
+
+#: .\templates\pages\dashboard.html:29 .\templates\pages\user_info.html:29
+msgid "Joined at"
+msgstr "Obuna sanasi"
+
+#: .\templates\pages\dashboard.html:30
+msgid "Change password"
+msgstr "Parolni o'zgartirish"
+
+#: .\templates\pages\dashboard.html:72 .\templates\pages\user_info.html:67
+msgid "Phone"
+msgstr "Telefon"
+
+#: .\templates\pages\dashboard.html:81 .\templates\pages\user_info.html:76
+msgid "Date of birth"
+msgstr "Tug'ilgan sana"
+
+#: .\templates\pages\dashboard.html:90
+#: .\templates\registration\user_change.html:11
+msgid "Edit Profile"
+msgstr "Tahrirlash"
+
+#: .\templates\pages\user_info.html:8
+msgid "User Info"
+msgstr "Foydalanuvchi Ma'lumoti"
+
+#: .\templates\pages\user_info.html:28
+msgid "Last login"
+msgstr "Oxirgi login"
+
+#: .\templates\pages\user_info.html:86
+msgid "Deactivate"
+msgstr "Nofaollashtirish"
+
+#: .\templates\pages\user_info.html:86
+msgid "Activate"
+msgstr "Faollashtirish"
+
+#: .\templates\pages\user_info.html:90
+msgid "Users List"
+msgstr "Foydalanuvchilar"
+
+#: .\templates\registration\logged_out.html:18
+msgid "You are logged out"
+msgstr "Siz saytdan chiqdingiz"
+
+#: .\templates\registration\logged_out.html:20
+msgid "You can use the service by logging in again"
+msgstr "Siz tizimga qayta kirgan holda xizmatdan foydalanishingiz mumkin"
+
+#: .\templates\registration\login.html:20
+#: .\templates\registration\password_reset_form.html:23
+msgid "Forgot password?"
+msgstr "Parolni unutdingizmi?"
+
+#: .\templates\registration\login.html:21
+#: .\templates\registration\password_reset_form.html:17
+msgid "Password reset"
+msgstr "Parolni tiklash"
+
+#: .\templates\registration\login.html:24
+msgid "Does your profile not exist"
+msgstr "Profilingiz mavjud emasmi"
+
+#: .\templates\registration\login.html:24
+#: .\templates\registration\signup.html:11
+#: .\templates\registration\signup.html:19
+msgid "Signup"
+msgstr "Ro'yxatdan o'tish"
+
+#: .\templates\registration\password_change_done.html:14
+#: .\templates\registration\password_change_done.html:17
+#: .\templates\registration\password_reset_complete.html:14
+msgid "Password changed"
+msgstr "Parol o'zgartirildi"
+
+#: .\templates\registration\password_change_done.html:19
+#: .\templates\registration\password_reset_complete.html:19
+msgid "You can log in the site with the new password."
+msgstr "Yangi parol bilan saytga kirishingiz mumkin."
+
+#: .\templates\registration\password_change_form.html:10
+msgid "Password change"
+msgstr "Parolni almashtirish"
+
+#: .\templates\registration\password_change_form.html:18
+msgid "Change"
+msgstr "O'zgartirish"
+
+#: .\templates\registration\password_change_form.html:19
+msgid "Go back"
+msgstr "Orqaga"
+
+#: .\templates\registration\password_reset_complete.html:17
+msgid "Password changed!"
+msgstr "Parol o'zgartirildi!"
+
+#: .\templates\registration\password_reset_confirm.html:16
+msgid "Create a new password!"
+msgstr "Parolni yangilash!"
+
+#: .\templates\registration\password_reset_confirm.html:33
+msgid "This link is not valid or may have been used before!"
+msgstr "Ushbu havola yaroqli emas yoki avval foydalanilgan bo'lishi mumkin!"
+
+#: .\templates\registration\password_reset_confirm.html:34
+msgid "You can try again by"
+msgstr "Qayta urinib ko'rishingiz mumkin"
+
+#: .\templates\registration\password_reset_confirm.html:34
+#: .\templates\registration\password_reset_done.html:28
+msgid "Resend"
+msgstr "Qayta yuborish"
+
+#: .\templates\registration\password_reset_done.html:15
+msgid "Email sent"
+msgstr "Elektron pochta yuborildi"
+
+#: .\templates\registration\password_reset_done.html:21
+msgid "Check your email"
+msgstr "Electron pochtangizni tekshiring"
+
+#: .\templates\registration\password_reset_done.html:24
+msgid "Password reset instructions have been sent to your email address"
+msgstr ""
+"Parolni tiklash bo'yicha ko'rsatmalar sizning elektron pochta manzilingizga "
+"yuborildi"
+
+#: .\templates\registration\password_reset_form.html:26
+msgid ""
+"Enter your email address below, and we'll send you a password reset guide!"
+msgstr ""
+"Quyida elektron pochta manzilingizni kiriting va biz sizga parolni tiklash "
+"bo'yicha qo'llanma yuboramiz!"
+
+#: .\templates\registration\password_reset_form.html:32
+msgid "Send"
+msgstr "Yuborish"
+
+#: .\templates\registration\password_reset_form.html:33
+msgid "Login page"
+msgstr "Login sahifasi"
+
+#: .\templates\registration\signup.html:21
+msgid "Already have an account?"
+msgstr "Profilingiz mavjudmi?"
+
+#: .\templates\registration\signup_done.html:14
+msgid "Success!"
+msgstr "Bajarildi!"
+
+#: .\templates\registration\user_change.html:22
+msgid "My page"
+msgstr "Shaxsiy"
+
+#~ msgid "User"
+#~ msgstr "Foydalanuvchi"
+
+#~ msgid "Welcome"
+#~ msgstr "Xush kelibsiz"

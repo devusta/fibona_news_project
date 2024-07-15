@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 
 {% block title %}About Us | Fibona News{% endblock title %}
@@ -11,7 +12,7 @@
       <div class="col-lg-8 col-md-8 col-sm-8">
         <div class="left_content">
           <div class="contact_area">
-              <h2>About Us</h2>
+              <h2>{% blocktranslate %}About Us{% endblocktranslate %}</h2>
               <div class="media wow fadeInDown"> 
                   <a href="{% url 'home' %}" class="about-tab-cell"> 
                       <img src="{% static 'images/fibona_logo.png' %}" alt="Logo" class="about-logo-img"> 
@@ -34,7 +35,7 @@
       <div class="col-lg-4 col-md-4 col-sm-4">
         <aside class="right_content">
           <div class="single_sidebar">
-            <h2><span>Popular News</span></h2>
+            <h2><span>{% blocktranslate %}Popular News{% endblocktranslate %}</span></h2>
             <ul class="spost_nav">
               {% for news in popular_news %}  
               <li>

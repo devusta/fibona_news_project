@@ -1,5 +1,6 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block title %}Signup | Fibona News{% endblock title %}
@@ -7,7 +8,7 @@
 {% block content %}
     
     <div class="single_post_content">
-        <h2><span>Signup</span></h2>
+        <h2><span>{% blocktranslate %}Signup{% endblocktranslate %}</span></h2>
     </div>
     <div class="single_post_content">
         <ul class="delete_section">
@@ -15,10 +16,10 @@
                 <form method="post">{% csrf_token %}
                     {{ form|crispy }}
                     <div class="">
-                        <button type="submit" class="btn btn-green">Signup</button>
+                        <button type="submit" class="btn btn-green">{% blocktranslate %}Signup{% endblocktranslate %}</button>
                         <div class="f-right" style="float: right;">
-                            <p class="dis-inline" style="display: inline;">Already have an account?</p>
-                            <a href="{% url 'login' %}" class="btn default-btn">Login</a>
+                            <p class="dis-inline" style="display: inline;">{% blocktranslate %}Already have an account?{% endblocktranslate %}</p>
+                            <a href="{% url 'login' %}" class="btn default-btn">{% blocktranslate %}Login{% endblocktranslate %}</a>
                         </div>
                     </div> 
                 </form>                    

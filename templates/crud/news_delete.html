@@ -1,11 +1,12 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 
 {% block title %}Delete News | Fibona News{% endblock title %}
 
 {% block content %}
     <div class="single_post_content">
-        <h2><span>Delete News</span></h2>
+        <h2><span>{% blocktranslate %}Delete News{% endblocktranslate %}</span></h2>
     </div>
     <div class="single_post_content">
         <ul class="delete_section wow">
@@ -21,11 +22,11 @@
             <li>
                 <form method="post">{% csrf_token %}
                     <figure class=bsbig_fig>
-                        <figcaption class="text-center">Do you want to delete the news "{{ news.title }}"?</figcaption>
+                        <figcaption class="text-center">{% blocktranslate %}Do you want to delete the news{% endblocktranslate %} "{{ news.title }}"?</figcaption>
                     </figure>
                     <div class="btn-section">
-                        <a href="{{ news.get_absolute_url }}" class="btn default-btn">Go Back</a>
-                        <button type="submit" class="btn btn-red">Delete</button>
+                        <a href="{{ news.get_absolute_url }}" class="btn default-btn">{% blocktranslate %}Go Back{% endblocktranslate %}</a>
+                        <button type="submit" class="btn btn-red">{% blocktranslate %}Delete{% endblocktranslate %}</button>
                     </div>
                 </form>                    
             </li>

@@ -40,12 +40,12 @@ img:hover{opacity:0.75}
 .scrollToTop:hover, .scrollToTop:focus{text-decoration:none; outline:none}
 #header{display:inline; float:left; width:100%; margin-top:20px}
 .header_top{background-color:#2c2c2c; display:inline; float:left; padding:0 30px; width:100%}
-.header_top_left{float:left; display:inline; width:50%}
+.header_top_left{float:left; display:inline; width:65%}
 .top_nav{text-align:left}
 .top_nav li{display:inline-block}
-.top_nav li a{display:inline-block; border-right:1px solid #333; color:#fff; font-size:11px; font-weight:bold; padding:20px 15px; text-transform:uppercase; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
+.top_nav li a{display:inline-block; border-right:1px solid #333; color:#fff; font-size:11px; font-weight:bold; padding:20px 5px; text-transform:uppercase; -webkit-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s; max-width: 80px; text-align:center; vertical-align: middle; max-height: 52px;}
 .top_nav li a:hover{background-color:#d083cf}
-.header_top_right{float:left; display:inline; width:50%; text-align:right}
+.header_top_right{float:left; display:inline; width:35%; text-align:right}
 .header_top_right > p{color:#fff; display:inline-block; float:right; font:bold 12px sans-serif; margin-bottom:0; padding-bottom:20px; padding-right:8px; padding-top:20px}
 .header_bottom{background-color:#fff; display:inline; float:left; padding:15px 30px 15px; width:100%}
 .logo_area{display:inline; float:left; width:31%}
@@ -246,7 +246,7 @@ figure.effect-layla:hover figcaption::after, figure.effect-layla:hover h2, figur
 .nav-slit img{left:0; position:absolute; top:0; width:100%; width:200px; height:130px}
 .nav-slit a:hover div{-webkit-transform:translateX(0); transform:translateX(0)}
 .nav-slit a:hover h3{-webkit-transition-delay:0.6s; transition-delay:0.6s; -webkit-transform:rotateX(0deg); transform:rotateX(0deg)}
-.error_page{float:left; display:inline; width:100%; text-align:center}
+.error_page{float:left; display:inline; width:100%; text-align:center; margin-bottom: 20px}
 .error_page > h3{text-transform:uppercase}
 .error_page > h1{font-size:110px}
 .error_page > p{font-size:15px; margin:0 auto; width:80%; margin-bottom:40px}

@@ -1,30 +1,47 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% block extrahead %}
     <script>window.CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/';</script>
     {{ block.super }}
 {% endblock extrahead %}
 
-{% block title %}Create News | Fibona News{% endblock title %}
+{% block title %}Add News | Fibona News{% endblock title %}
 
 {% block content %}
     <div class="single_post_content">
-        <h2><span>Create News</span></h2>
+        <h2><span>{% blocktranslate %}Add News{% endblocktranslate %}</span></h2>
     </div>
-        <div class="single_post_content">
-            <ul class="delete_section wow">
-                <li>
-                    <form method="post" enctype="multipart/form-data">{% csrf_token %}
-                        {{ form.media }}
-                        {{ form|crispy }}
-                        <div class="btn-section">
-                            <a href="{% url 'home' %}" class="btn default-btn">Go Home</a>
-                            <button type="submit" class="btn btn-green">Save</button>
-                        </div>
-                    </form>                    
-                </li>
-            </ul>
-        </div>
+    <div class="single_post_content">
+        <ul class="delete_section wow">
+            <li>
+                <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                    {{ form.media }}
+                    {{ form|crispy }}
+                    <div class="btn-section">
+                        <a href="{% url 'home' %}" class="btn default-btn">{% blocktranslate %}Go Home{% endblocktranslate %}</a>
+                        <button type="submit" class="btn btn-green">{% blocktranslate %}Save{% endblocktranslate %}</button>
+                    </div>
+                </form>                    
+            </li>
+        </ul>
+    </div>
+    {#    autofill slug uchun script #}
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const titleInput = document.getElementById('id_title');
+        const slugInput = document.getElementById('id_slug');
+
+        titleInput.addEventListener('input', function() {
+            const slug = titleInput.value
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)+/g, '');
+
+            slugInput.value = slug;
+        });
+    });
+</script>
     
 {% endblock content %}

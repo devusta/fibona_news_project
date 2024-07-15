@@ -1,12 +1,13 @@
 {% extends 'news/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 
 {% block title %}Login | Fibona News{% endblock title %}
 
 {% block content %}
     <div class="single_post_content">
-        <h2><span>Login</span></h2>
+        <h2><span>{% blocktranslate %}Login{% endblocktranslate %}</span></h2>
     </div>
     <div class="single_post_content">
         <ul class="delete_section wow">
@@ -16,11 +17,11 @@
                     <div>
                         <button type="submit" class="btn btn-green">Login</button>
                         <div style="float: right;">
-                            <p style="display: inline;">Does your profile not exist?</p>
-                            <a href="{% url 'password_reset' %}" class="btn default-btn">Password reset</a>
+                            <p style="display: inline;">{% blocktranslate %}Forgot password?{% endblocktranslate %}</p>
+                            <a href="{% url 'password_reset' %}" class="btn default-btn">{% blocktranslate %}Password reset{% endblocktranslate %}</a>
                         </div>
                         <div>
-                            <p style="float: right;">If your profile does not exist, you can <a href="{% url 'signup' %}" class="" style="color: #12A3DF; text-decoration: underline;">Signup</a> </p>
+                            <p style="float: right;">{% blocktranslate %}Does your profile not exist{% endblocktranslate %}? <a href="{% url 'signup' %}" class="" style="color: #12A3DF; text-decoration: underline;">{% blocktranslate %}Signup{% endblocktranslate %}</a> </p>
                         </div>
                     </div> 
                 </form>                    
