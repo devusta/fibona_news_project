@@ -140,8 +140,8 @@ LOCALE_PATHS = [str(BASE_DIR.joinpath("locale"))]
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = ['/home/djangomo/django-mohirdev-demo.uz/django/static']
-STATIC_ROOT = '/home/djangomo/django-mohirdev-demo.uz/staticfiles'
+STATICFILES_DIRS = ['/home/fibonane/fibona-news.uz/django/static']
+STATIC_ROOT = '/home/fibonane/fibona-news.uz/staticfiles'
 # local
 # STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 # STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
@@ -170,7 +170,7 @@ LOGIN_URL = "login"
 
 
 MEDIA_URL = "media/"
-MEDIA_ROOT = '/home/djangomo/django-mohirdev-demo.uz/'
+MEDIA_ROOT = '/home/fibonane/fibona-news.uz/'
 # local
 # MEDIA_ROOT = BASE_DIR / "media"
 
