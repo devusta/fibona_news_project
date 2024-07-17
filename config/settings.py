@@ -141,7 +141,7 @@ LOCALE_PATHS = [str(BASE_DIR.joinpath("locale"))]
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = ['/home/fibonane/fibona-news.uz/django/static']
-STATIC_ROOT = '/home/fibonane/fibona-news.uz/staticfiles'
+STATIC_ROOT = '/home/fibonane/fibona-news.uz/django/staticfiles'
 # local
 # STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 # STATIC_ROOT = str(BASE_DIR.joinpath("staticfiles"))
@@ -170,7 +170,7 @@ LOGIN_URL = "login"
 
 
 MEDIA_URL = "media/"
-MEDIA_ROOT = '/home/fibonane/fibona-news.uz/'
+MEDIA_ROOT = '/home/fibonane/fibona-news.uz/django/media'
 # local
 # MEDIA_ROOT = BASE_DIR / "media"
 
